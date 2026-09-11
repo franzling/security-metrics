@@ -8,10 +8,8 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    document != {}
-    "PolicyDocument" in document.type
-    is_object(document.assetInventory)
-    "auditInterval" in object.keys(document.assetInventory)
+    document.assetInventory != {}
+	"PolicyDocument" in document.type
 }
 
 compliant if {
