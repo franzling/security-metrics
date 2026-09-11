@@ -9,9 +9,9 @@ default applicable := false
 default compliant := false
 
 applicable if {
-  "PolicyDocument" in input.type
   ai.type == "digital"
   "auditInterval" in object.keys(ai)
+  "PolicyDocument" in input.type
 }
 
 
