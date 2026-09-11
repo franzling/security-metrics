@@ -10,9 +10,8 @@ default applicable := false
 default compliant := false
 
 applicable if {
-    ai
-    is_object(ai)
     "allRequiredInformationRecorded" in object.keys(ai)
+    "Account" in input.type
 }
 
 compliant if {
