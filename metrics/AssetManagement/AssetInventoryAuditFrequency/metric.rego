@@ -9,8 +9,9 @@ default compliant := false
 
 applicable if {
     document != {}
-    document.assetInventory
     "PolicyDocument" in document.type
+    is_object(document.assetInventory)
+    "auditInterval" in object.keys(document.assetInventory)
 }
 
 compliant if {
