@@ -12,7 +12,9 @@ applicable if {
   ai != {}
   "PolicyDocument" in input.type
   ai.type == "digital"
+  "auditInterval" in object.keys(ai)
 }
+
 
 compliant if {
     compare(data.operator, data.target_value, ai.auditInterval)
