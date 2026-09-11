@@ -11,6 +11,8 @@ default compliant := false
 
 applicable if {
     ai
+    is_object(ai)
+    "allRequiredInformationRecorded" in object.keys(ai)
 }
 
 compliant if {
