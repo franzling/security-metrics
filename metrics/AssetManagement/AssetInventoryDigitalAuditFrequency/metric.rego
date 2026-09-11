@@ -9,7 +9,6 @@ default applicable := false
 default compliant := false
 
 applicable if {
-  ai != {}
   "PolicyDocument" in input.type
   ai.type == "digital"
   "auditInterval" in object.keys(ai)
